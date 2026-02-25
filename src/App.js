@@ -56,7 +56,7 @@ function App() {
   };
 
   return (
-    <div className="app"  style={{  paddingTop: '5rem' }}>
+    <div className="app" style={{ paddingTop: '5rem' }}>
       {isLoading && (
         <div className="loading-spinner">
           <MagnifyingGlass visible={true} height={80} width={80}
@@ -82,12 +82,14 @@ function App() {
           type="text"
         />
 
-        <AwesomeButton style={{ marginLeft: '1rem' , color:'blue' ,     
-        '--button-primary-color': '#9ce0ffff',
-        '--button-primary-color-dark': '#003147ff',  
-        '--button-primary-color-light': '#000000ff',
-        '--button-primary-color-hover': '#59cbffff',
-        '--button-primary-text-color': '#000000ff',  }} type="primary" onPress={() => handleSearch()}>
+        <AwesomeButton style={{
+          marginLeft: '1rem', color: 'blue',
+          '--button-primary-color': '#9ce0ffff',
+          '--button-primary-color-dark': '#003147ff',
+          '--button-primary-color-light': '#000000ff',
+          '--button-primary-color-hover': '#59cbffff',
+          '--button-primary-text-color': '#000000ff',
+        }} type="primary" onPress={() => handleSearch()}>
           {'Search'}
         </AwesomeButton>
       </div>
@@ -97,7 +99,7 @@ function App() {
       </div>
 
       {data ?
-        <div className="container" style={{marginTop:'-3rem'}}>
+        <div className="container" style={{ marginTop: '-3rem' }}>
           <div className="top">
             <div className='location'>
               <p>{data.name}</p>
@@ -132,19 +134,19 @@ function App() {
             </div>
           </div>
         </div>
-        :    <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '200px',
-                gap:'5rem'
-              }}>
-          <img className="weather-default-image" src={weatherImageDefault1} alt="weather-default-image" style={{width:'15rem' , height:'10rem'}}/>
-          <img className="weather-default-image" src={weatherImageDefault2} alt="weather-default-image" style={{width:'15rem' , height:'10rem' , marginTop:'4rem'}}/>
-          <img className="weather-default-image" src={weatherImageDefault3} alt="weather-default-image" style={{width:'15rem' , height:'10rem' , marginTop:'7rem'}}/>
-        </div> }
+        : <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '200px',
+          gap: '5rem'
+        }}>
+          <img className="weather-default-image" src={weatherImageDefault1} alt="weather-default-image" style={{ width: '15rem', height: '10rem' }} />
+          <img className="weather-default-image" src={weatherImageDefault2} alt="weather-default-image" style={{ width: '15rem', height: '10rem', marginTop: '4rem' }} />
+          <img className="weather-default-image" src={weatherImageDefault3} alt="weather-default-image" style={{ width: '15rem', height: '10rem', marginTop: '7rem' }} />
+        </div>}
 
-      <div className="unit-dropdown" style={{  paddingTop: '5rem', marginLeft: '5rem' }}>
+      <div className="unit-dropdown" style={{ paddingTop: '5rem', marginLeft: '5rem' }}>
         <Select
           options={unitOptions}
           value={unitOptions.find(option => option.value === unit)}
