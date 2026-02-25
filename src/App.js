@@ -10,7 +10,7 @@ import weatherImageDefault2 from './images/default2.png';
 import weatherImageDefault3 from './images/default3.png';
 
 function App() {
-  const API_KEY = '<YOUR API KEY FROM openweathermap.org>';
+  const API_KEY = process.env.REACT_APP_API_KEY; //API from openweathermap.org
 
   const [data, setData] = useState('');
   const [location, setLocation] = useState('');
